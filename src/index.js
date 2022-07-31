@@ -1,17 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import SingleComment from "./SingleComment";
+import img1 from "./img/1.jpg"
+import img2 from "./img/2.jpg"
+import img3 from "./img/3.jpg"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App = () => {
+    return (
+        <div className='ui comments'>
+            <SingleComment img={img1}  name='Eymen'  date='Today 5:00'  text="It's amazing" />
+            <SingleComment img={img2}  name='Mehmet'  date='Today 5:02'  text="Great jobs" />
+            <SingleComment img={img3}  name='Türkan'  date='Today 5:15'  text="Thanks." />
+        </div>
+    )
+}
+ReactDOM.render(
+    <App/>,
+    document.querySelector("#root"),
+)
