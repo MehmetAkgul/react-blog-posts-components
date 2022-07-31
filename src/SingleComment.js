@@ -1,8 +1,6 @@
 import React from "react";
-import img1 from "./img/1.jpg";
 
 const SingleComment=(props)=>{
-    console.log(props)
     return(
         <div className='comment'>
             <a href="/" className='avatar'>
